@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  margin: auto;
+}
+
+.second-container{
+ display: flex;
+ margin: auto;
+ justify-content:center;
+ align-items: center;
+ width: 75vw;
+}
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #8a8989;
+  padding: 10px;
+  text-align: center;
+  /* height: 4rem; */
+  /* padding: 1rem 1rem; */
+  display: flex;
+  flex-grow: 0 1 ;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+}
+
+.hovers{
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+  
+}
+.home{
+  background-color: rgb(110, 110, 245);
+  color: white;
+}
+.home,.about,.contact{
+  
+  padding: .5rem;
+}
+.home:hover{
+  cursor: pointer;
+}
+ .contact:hover,.about:hover{
+  cursor: pointer;
+  background-color: #d6d4d4;
+}
+
+.left, .right, .middle {
+  padding: 1rem;
+  float: left;
+  /* float: left; */
+  width: 40%;
+  /* background-color: blue; */
+  /* padding: 50px; */
+
+  perspective: 150rem;
+  position: sticky;
+  /* height: 40rem; */
+  /* max-width: 400px; */
+  /* margin: 2rem; */
+  box-shadow: none;
+  background: none;
+}
+ 
+.left-side{
+  /* height: 35rem; */
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  /* padding: 2rem; */
+  color: white;
+}
+.left-side.back{
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%)
+}
+.left-side.front{
+  /* background-color: #0093E9; */
+  /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+
+}
+.left:hover,.middle:hover,.right:hover .left-side.front{
+  transform: rotateY(180deg);
+}
+.left:hover,.middle:hover,.right:hover .left-side.back{
+  transform: rotateY(0deg);
+}
+
+/* Style the footer */
+.footer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  clear: left;
+  grid-area: footer;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(147, 184, 190);
+  color: white;
+  text-align: center;
+} 
